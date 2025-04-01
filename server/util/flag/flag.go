@@ -69,6 +69,7 @@ func Duration(name string, value time.Duration, usage string, tags ...flagtags.T
 func URL(name string, value string, usage string, tags ...flagtags.Taggable) *url.URL {
 	u, err := url.Parse(value)
 	if err != nil {
+		log.Infof("Test change to trigger webhook")
 		log.Fatalf("Error parsing default URL value '%s' for flag: %v", value, err)
 		return nil
 	}
